@@ -1,0 +1,32 @@
+import matplotlib as plt 
+import numpy as np
+import math
+
+
+def f(x):
+    return 1/x * (1 + math.log(x*99990))
+
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Prepare the data
+data = []
+for i in range(1,50): #range of data for seeding
+    data.append(f(i)) #seed the plot using your function
+
+# Plot the data
+plt.plot(data, label='f(x)')
+plt.grid()
+plt.yscale("log") #use this to create a log scale
+plt.title('Change of the number of Susceptibles due to contact ratio number q')
+plt.xlabel('contact rate q')
+plt.ylabel('f(x)')
+plt.show()
+
+# Add a legend
+plt.legend()
+
+# Show the plot
+plt.show()
